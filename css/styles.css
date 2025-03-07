@@ -1,36 +1,106 @@
 /* Import Work Sans font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 
+/* General body styles */
 body {
     font-family: 'Work Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header and Navigation styles */
 header {
-    background: #35424a;
-    color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 10px 0;
-    text-align: center;
 }
 
-h1 {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+nav img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
     margin: 0;
+    padding: 0;
 }
 
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(223,40,102);
+}
+
+/* Hero section styles */
+.hero {
+    background-color: rgb(223,40,102);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 90% 10%;
+    border-bottom-right-radius: 80% 20%;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-container h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+}
+
+/* Container styles */
 .container {
-    width: 80%;
     margin: auto;
     overflow: hidden;
+    padding: 2rem 1rem;
+    color: rgb(110, 43, 95);
 }
 
+.container p {
+    font-size: 1rem;
+}
+
+/* Footer styles */
 footer {
-    background: #35424a;
-    color: #ffffff;
+    background-color: rgb(223,40,102);
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@media (min-width: 1025px) {
+    .container {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
 }
